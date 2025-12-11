@@ -1,0 +1,63 @@
+migeratign for turborepo to nx repo to manage microservices smoosly
+powerfull monorepo tool 
+turbo repo for front-end frameworks 
+nx for nestjs and backend  it is better jouice for nextjs microservices 
+but in turbo repo you have to setup every thin manually 
+is is building dependancy tracking 
+betterjoice for dealing grpc kafka radis 
+nx full stack monorepo 
+
+important commands:
+
+1- install nx globally 
+npm i -g nx 
+
+//add @nx/nest plugin 
+nx add @nx/nest
+
+2- create workspace:
+npx create-nx-workspace@latest your-work-space-name
+stack typescript - none prttier - githubActions 
+
+3- create app:(nx generate) instead of manually generating files use nx generate
+
+npx nx generate @nx/nest:application my-app-name
+
+// create a new module 
+npx nx generate @nx/nest:module my-app/my-module
+
+// generate controller 
+npx nx generate @nx/nest:controller my-app/my-controller
+
+//generate library 
+npx nx generate @nx/nest:library my-lib
+
+
+the important file you need to study and analyze
+see nx.json and see the plugins and it's targets 
+
+
+4- build and run the application 
+nx serve
+nx serve app
+
+
+nx g @nx/nest:app apps/app-name1
+nx g @nx/nest:app apps/app-name2
+nx g @nx/nest:app apps/app-name3
+
+generate the application fast because of-
+powerfull caching system of the nx 
+
+
+nx serve app-name1
+nx serve app-name2
+nx serve app-name3
+
+
+nx run-many -t serve --all
+
+nx build app-name1 
+nx test app-name1
+
+congratulation now you are ready to implement grpc for communication between services 
